@@ -1,56 +1,21 @@
 {% extends "base.html" %}
 {% load static %}
-        {% block content %}
-       <!-- Inicio -->
-         <section id="Home" >
-            <h2>Impacto da tecnologia na Sexualidade e Saúde Sexual</h2>
-            <p>A pornografia pode ter um impacto significativo na vida dos jovens, principalmente devido à facilidade de acesso proporcionada pelas tecnologias modernas.
-            </p>
-            <div class="btn">
-                <a class="blue" href="{% url "post" %}">Saiba Mais</a>
+    
+    {% block content %}
+        <section id="blog-container">
+            <div class="blogs blogpost">
+                <div class="post">
+                    <img src="{% static 'images/pornografia.jpg' %}" alt="">
+                    <h3>A Era Digital e Seus Impactos na Sexualidade e Saúde Sexual: Uma Jornada Entre Benefícios e Desafios</h3>
+                    <p>
+                        A tecnologia se infiltrou em diversos aspectos da nossa vida, e a sexualidade não é exceção. Novas ferramentas e plataformas digitais surgem a todo momento, impactando a forma como nos relacionamos, exploramos nossa sexualidade e buscamos informações sobre saúde sexual.
+                        <br><br>
+                        Essa jornada na era digital traz consigo uma gama de oportunidades e desafios. De um lado, a facilidade de acesso à informação, a conexão com diversas comunidades e a possibilidade de explorar a sexualidade com segurança e discrição são alguns dos benefícios que a tecnologia oferece.
+                        
+                        É essencial respeitar tanto a orientação sexual quanto a identidade de gênero das pessoas, pois isso está diretamente relacionado ao direito de cada um viver de maneira autêntica.
+                       <br><br> 
+                       Por outro lado, conteúdos questionáveis, falta de confiabilidade em algumas fontes, desafios na garantia da privacidade e os riscos do consumo excessivo de pornografia são alguns dos pontos que exigem atenção e senso crítico.</p>
+                </div>
             </div>
         </section>
-        
-        <!-- Courses -->
-        <section id="course">
-           <h1>Notícias</h1>
-            <p>Quebrando o tabu da Sexualidade</p>
-            <div class="course-box">
-
-                <div class="courses">
-                    <img src="images/redes-sociais-vida sexual.jpg" alt="">
-                    <div class="details">                  
-                        <span>Postado 24/02/24</span>
-                        <h6>Redes sociais estão afetando a vida sexual</h6>                      
-                    </div>
-                    <div class="cost">
-                        <a href="https://www.terra.com.br/vida-e-estilo/saude/redes-sociais-estao-afetando-a-vida-sexual,51d786e39332df6352e2fe07933042c4x8sla7nw.html" target="_blank">Ver</a>
-                    </div>
-                </div>
-
-                <div class="courses">
-                    <img src="images/carmo-dalla.jpg" alt="">
-                    <div class="details">
-                        <span>Postado há 2 semanas</span>
-                        <h6>Carmo Dalla Vecchia diz que vício em pornografia atrapalhou sua vida íntima</h6>
-                    </div>
-                    <div class="cost">
-                        <a href="https://f5.folha.uol.com.br/celebridades/2024/07/carmo-dalla-vecchia-diz-que-vicio-em-pornografia-atrapalhou-sua-vida-intima.shtml" target="_blank">Ver</a>  
-                    </div>
-                </div>
-
-                <div class="courses">
-                    <img src="images/orgasmo.jpg" alt="">
-                    <div class="details">
-                        <span>Postado 23/08/2023</span>
-                        <h6>Inteligência artificial recria imagem de orgasmos</h6>
-                    </div>
-                    <div class="cost">
-                        <a href="https://www.correiobraziliense.com.br/tecnologia/2023/08/5119333-inteligencia-artificial-recria-imagem-de-orgasmos.html" target="_blank">Ver</a>   
-                    </div>
-                </div>
-        </section>
-        {% endblock content %}
-    </body>
-
-</html>
+    {% endblock content %}
