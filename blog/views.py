@@ -22,9 +22,14 @@ def contact(request):
     pessoas = Pessoa.objects.all()
 
     context = {
-        "pessoas": pessoas    
+        "pessoas": pessoas 
         }
     return render(request, "contact.html", context)
 
-def post(resquest):
-    return render(resquest, "post.html")
+def post(request, id):
+    post = Post.objects.get(pk=id)
+    
+    context = {
+        "post": post,
+    }
+    return render(request, "post.html", context)

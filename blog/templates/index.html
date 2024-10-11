@@ -1,21 +1,31 @@
 {% extends "base.html" %}
 {% load static %}
-    
-    {% block content %}
-        <section id="blog-container">
-            <div class="blogs blogpost">
-                <div class="post">
-                    <img src="{% static 'images/pornografia.jpg' %}" alt="">
-                    <h3>A Era Digital e Seus Impactos na Sexualidade e Saúde Sexual: Uma Jornada Entre Benefícios e Desafios</h3>
-                    <p>
-                        A tecnologia se infiltrou em diversos aspectos da nossa vida, e a sexualidade não é exceção. Novas ferramentas e plataformas digitais surgem a todo momento, impactando a forma como nos relacionamos, exploramos nossa sexualidade e buscamos informações sobre saúde sexual.
-                        <br><br>
-                        Essa jornada na era digital traz consigo uma gama de oportunidades e desafios. De um lado, a facilidade de acesso à informação, a conexão com diversas comunidades e a possibilidade de explorar a sexualidade com segurança e discrição são alguns dos benefícios que a tecnologia oferece.
-                        
-                        É essencial respeitar tanto a orientação sexual quanto a identidade de gênero das pessoas, pois isso está diretamente relacionado ao direito de cada um viver de maneira autêntica.
-                       <br><br> 
-                       Por outro lado, conteúdos questionáveis, falta de confiabilidade em algumas fontes, desafios na garantia da privacidade e os riscos do consumo excessivo de pornografia são alguns dos pontos que exigem atenção e senso crítico.</p>
-                </div>
-            </div>
-        </section>
-    {% endblock content %}
+
+        {% block content %}
+            <!-- Inicio -->
+            <section id="Home" >
+                <h2>Impacto da tecnologia na Sexualidade e Saúde Sexual</h2>
+                <p>A pornografia pode ter um impacto significativo na vida dos jovens, principalmente devido à facilidade de acesso proporcionada pelas tecnologias modernas.
+                </p> 
+            </section>
+
+            <!-- Courses -->
+            <section id="course">
+            <h1>Notícias</h1>
+                <p>Quebrando o tabu da Sexualidade</p>
+                <div class="course-box">
+                    {% for noticia in noticias %}
+                    <div class="courses">
+                        <img src="{{ noticia.imagem.url }}" alt="">
+                        <div class="details">                  
+                            <span>{{ noticia.data }}</span>
+                            <h6>{{ noticia.titulo }}</h6>                      
+                        </div>
+                        <div class="cost">
+                            <a href="{{ noticia.url }}" target="_blank">Ver</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+            </section>
+        {% endblock %}
+<script src="{% static 'script/main.js' %}"></script>
